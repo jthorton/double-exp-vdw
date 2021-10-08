@@ -108,6 +108,7 @@ def build_double_exp_force_field(
     # values, with epsilon mostly transferred to the oxygen here we make the r_min
     # bigger to work but we could probably zero out this term completely?
     problem_parameter = double_exp_handler.parameters["[#1:1]-[#8]"]
+    problem_parameter.epsilon = 0.0 * unit.kilojoules_per_mole
     problem_parameter.r_min = 1.0 * unit.angstrom
 
     ff.register_parameter_handler(double_exp_handler)
