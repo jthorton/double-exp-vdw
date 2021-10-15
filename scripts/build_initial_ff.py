@@ -103,6 +103,11 @@ def build_double_exp_force_field(
 
     ff.deregister_parameter_handler("vdW")
 
+    vdw = ff.get_parameter_handler("vdW")
+    vdw.add_parameter(
+        {"smirks": "[*:1]", "epsilon": 0.0 * unit.kilocalories_per_mole, "sigma": 1.0 * unit.angstrom}
+    )
+
     # we have to modify this parameter manually as this can cause the long range
     # correction in openmm to fail. This parameter is a place holder with almost zero
     # values, with epsilon mostly transferred to the oxygen here we make the r_min
