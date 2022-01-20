@@ -1,9 +1,9 @@
 name: double-exp-vdw
 
 channels:
+  - conda-forge
   - simonboothroyd
   - openeye
-  - conda-forge
   - defaults
 
 dependencies:
@@ -18,8 +18,14 @@ dependencies:
   - seaborn
 
   # vdW fitting
-  - openff-evaluator >=0.3.8
-  - nonbonded >= 0.0.1b1
+  - cudatoolkit=11.0
+  - openmm <7.6|>7.6
+  - openff-evaluator-base >=0.3.8
+  - nonbonded >= 0.0.1b4
+  - dask ==2.30.0
   - distributed ==2.30.1
   - mdtraj ==1.9.4
   - smirnoff-plugins >=0.0.2
+
+  # Transfer free energy benchmarks
+  - absolv
