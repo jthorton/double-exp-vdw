@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+#SBATCH -J benchmark_parallel
+#SBATCH -p standard
+#SBATCH -t 4:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks=8
+#SBATCH --cpus-per-task=1
+#SBATCH --mem-per-cpu=3gb
+#SBATCH --account dmobley_lab
+#SBATCH --export ALL
+#SBATCH --requeue
+
+# Set the output and error output paths.
+#SBATCH -o  slurm-%J.out
+#
+
+. ~/.bashrc
+# Use the right conda environment
+conda activate /dfs6/pub/pbehara/bin/conda/openff-force-fields 
+#conda env export > conda_env.yaml
+python /dfs4/dmobley-lab/pbehara/fitting-exp/df4_benchmark-data/03-b-join-metrics.py 03-outputs/* -o 03-metrics.csv
+
+python /dfs4/dmobley-lab/pbehara/fitting-exp/df4_benchmark-data/04-plot-metrics.py -i 03-metrics.csv

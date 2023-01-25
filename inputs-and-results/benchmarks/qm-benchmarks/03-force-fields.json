@@ -1,0 +1,12 @@
+{
+  "qm-structure": "02-chunks/01-processed-qm",
+  "qm-label": "B3LYP-D3BJ/DZVP",
+  "qm-tag": "Energy QCArchive",
+  "mm-structures": {
+    "Sage (vanilla)": "02-outputs/openff-2-0-0",
+    "dexp (reduced-set)": "02-outputs/iter-dexp",
+    "Sage retrained": "02-outputs/iter-sage-retrained"
+  },
+  "mm-tag": "Energy FFXML",
+  "record-id-tag": "Record QCArchive"
+}

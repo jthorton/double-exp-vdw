@@ -1,4 +1,11 @@
+1. `dexp-valence-fit`: valence parameters refit for the output FF from optimized double exponential non-bonded parameters, which were trained on Sage empirical data which includes all elements except for {F, P, S, I}.
+
+2. `dexp-valence-fit-scale14-optimized`: scaling factor `scale14` optimized along with other valence parameters from `dexp-valence-fit`, on the same set of training targets.
+
+3. `sage-refit`: Sage refit on the same reduced set of training targets as in 1 (reduced set here means excluding elements {F, P, S, I}).
+
 # Optimizations
+
 
 Contained within this directory are the main inputs (or instructions on how they may be generated)
 for training the matrix of force fields against both physical property and QC data.
