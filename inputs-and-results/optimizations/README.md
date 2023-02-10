@@ -4,6 +4,11 @@
 
 3. `sage-refit`: Sage refit on the same reduced set of training targets as in 1 (reduced set here means excluding elements {F, P, S, I}).
 
+4. `dexp-tip4p-b68`: Non-bonded fitting of the DE-TIP4P water model using ForceBalance for a reduced set of targets
+starting from a curve fit of the B68 model. 
+
+5. `dexp-all-fit`: Non-bonded fitting of the DE general force field including the optimised DE-TIP4P-B68 water model.
+
 # Optimizations
 
 
