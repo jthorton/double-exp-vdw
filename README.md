@@ -7,7 +7,7 @@ The pre-print is freely available at https://doi.org/10.26434/chemrxiv-2023-28r9
 
 ### Structure
 
-This repository is structured into four main directories:
+This repository is structured into three main directories:
 
 * `data-set-curation` - contains the scripts used to curate the training and test data sets as well as the final test sets.
 
