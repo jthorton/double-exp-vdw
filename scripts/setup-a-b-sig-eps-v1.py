@@ -96,7 +96,7 @@ def main():
                     "[#8:1]",
                     "[#8X2H0+0:1]",
                     "[#8X2H1+0:1]",
-                    "[#1]-[#8X2H2+0:1]-[#1]",
+                    "[#1]-[#8X2H2+0:1]-[#1]",       # water oxygen
                 ]
             ],
         ],
@@ -118,7 +118,7 @@ def main():
                 "data-set-curation",
                 "physical-property",
                 "optimizations",
-                "vdw-ff-train-water-rho.json",
+                "sage-and-water-rho.json",
             )
         )
     ]
@@ -134,7 +134,7 @@ def main():
 
         OptimizationInputFactory.generate(
             optimization,
-            "double-exp-vdw",
+            "dexp-fit-all",
             max_time="168:00",
             evaluator_preset="lilac-dask",
             evaluator_port=8000,
