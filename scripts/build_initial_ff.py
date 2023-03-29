@@ -2,6 +2,8 @@
 water model that has been pre-fit."""
 
 from openff.toolkit.typing.engines.smirnoff import ForceField, ParameterList
+from openff.toolkit.topology import Molecule
+
 from simtk import unit
 from smirnoff_plugins.handlers.nonbonded import DoubleExponential
 
@@ -50,13 +52,13 @@ def add_tip4p_double_exp(force_field: ForceField):
     virtual_site_handler = force_field.get_parameter_handler("VirtualSites")
     virtual_site_handler.add_parameter(
         {
-            "smirks": "[#1:1]-[#8X2H2+0:2]-[#1:3]",
+            "smirks": "[#1:2]-[#8X2H2+0:1]-[#1:3]",
             "type": "DivalentLonePair",
             "distance": -0.010743 * unit.nanometers,
             "outOfPlaneAngle": 0.0 * unit.degrees,
             "match": "once",
-            "charge_increment1": 0.53254 * unit.elementary_charge,
-            "charge_increment2": 0.0 * unit.elementary_charge,
+            "charge_increment2": 0.53254 * unit.elementary_charge,
+            "charge_increment1": 0.0 * unit.elementary_charge,
             "charge_increment3": 0.53254 * unit.elementary_charge,
         }
     )
