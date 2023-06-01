@@ -1,6 +1,6 @@
 # QM Benchmarks on optimized geometries
 
-The benchmark scripts from Lim-Hahn's work (as mentioned in acknowledgment) as adapted in the Sage fitting repo, https://github.com/openforcefield/openff-sage/tree/main/inputs-and-results/benchmarks/qc-opt-geo, were used here. Additional slurmscripts are provided to run them on a HPC cluster, and the outputs were also attached. Some changes in the scripts include the application of an element filter to exclude {F, P, S, I} from the benchmark set (the QCArchive reference name for the benchmark set is `OpenFF Industry Benchmark Season 1 v1.1`).
+The benchmark scripts from Lim-Hahn's work (as mentioned in acknowledgment) as adapted in the Sage fitting repo, https://github.com/openforcefield/openff-sage/tree/main/inputs-and-results/benchmarks/qc-opt-geo, were used here. Additional slurmscripts are provided to run them on a HPC cluster, and the outputs were also attached. Some changes in the scripts include the application of an element filter to exclude {F, P, S, I} from the benchmark set (the QCArchive reference name for the benchmark set is `OpenFF Industry Benchmark Season 1 v1.1`). And, another change is the use of smirnoff-plugins for the new functional form, the forcefield loading call would include the `load_plugins` argument as in `smirnoff_force_field = smirnoff.ForceField(force_field_path, load_plugins=True, allow_cosmetic_attributes=True)`.
 
 
 This directory contains the scripts needed to compute the ddE, RMSD, and TDF metrics for a set
@@ -58,6 +58,7 @@ Acknowledgments section below for more details).
  01-processed-qm.sdf.tar.gz - SDF file of the QM optimized final geometries for the corresponding records in the json file.
  01-setup.py - Script to download and process the QM from QCArchive using `openff-qcsubmit`.
  02-a-chunk-qm.py - Script to split the SDF file containing QM geometries into chunks for parallel MM optimizations.
+ 02-b-minimize.py - Script to perform the MM minimizations with the QM geometry as as starting point
  02-chunks.tar.gz - Compressed directory that contains the QM chunk files created.
  02-outputs.tar.gz - Compressed directory that contains the MM optimizations of forcefields mentioned in `03-force-fields.json` file.
  03-a-compute-metrics.py - Script to compute the metrics RMSD/TFD/ddE using the QM and MM optimized final geometries.
