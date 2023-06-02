@@ -136,6 +136,7 @@ def main():
             "OpenFF Gen 2 Torsion Set 4 eMolecules Discrepancy 2",
             "OpenFF Gen 2 Torsion Set 5 Bayer 2",
             "OpenFF Gen 2 Torsion Set 6 supplemental 2",
+            "OpenFF Amide Torsion Set v1.0"
         ],
         spec_name="default",
     )
@@ -190,17 +191,17 @@ def main():
         file.write(optimization_set.json())
 
     select_parameters(
-        opt_set,
+        optimization_set,
         parameter_types=["Angles"],
         output_path="data-sets/reduced-set-angles-params-smirks.json",
-        force_field=initial_force_field,
+        force_field=initial_forcefield,
     )
     
     select_parameters(
-        opt_set,
+        optimization_set,
         parameter_types=["Bonds"],
         output_path="data-sets/reduced-set-bonds-params-smirks.json",
-        force_field=initial_force_field,
+        force_field=initial_forcefield,
     )
 
 
