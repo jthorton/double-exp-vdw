@@ -71,7 +71,7 @@ def select_parameters(training_set, parameter_types, output_path, force_field):
     # Print out coverage information.
     coverage = defaultdict(int)
 
-    with Pool(8) as pool:
+    with Pool(4) as pool:
 
         for parameter_ids in tqdm(
                 pool.imap(
@@ -109,7 +109,7 @@ def select_parameters(training_set, parameter_types, output_path, force_field):
 
 def main():
     logging.basicConfig(level=logging.INFO)
-    Path("./data-sets").mkdir(parents=True, exist_ok=True)
+    Path("./rerun-data-sets").mkdir(parents=True, exist_ok=True)
 
     initial_forcefield = ForceField('force-field_7.offxml', load_plugins=True, allow_cosmetic_attributes=True)
 
@@ -136,6 +136,7 @@ def main():
             "OpenFF Gen 2 Torsion Set 4 eMolecules Discrepancy 2",
             "OpenFF Gen 2 Torsion Set 5 Bayer 2",
             "OpenFF Gen 2 Torsion Set 6 supplemental 2",
+            "OpenFF Amide Torsion Set v1.0",            
         ],
         spec_name="default",
     )
@@ -158,13 +159,13 @@ def main():
         HydrogenBondFilter(method="baker-hubbard"), *default_filters
     )
 
-    with open("data-sets/reduced-set-td-set.json", "w") as file:
+    with open("rerun-data-sets/reduced-set-td-set.json", "w") as file:
         file.write(torsion_set.json())
 
     select_parameters(
         torsion_set,
         parameter_types=["ProperTorsions"],
-        output_path="data-sets/reduced-set-proper-torsions-params-smirks.json",
+        output_path="rerun-data-sets/reduced-set-proper-torsions-params-smirks.json",
         force_field=initial_forcefield
     )
 
@@ -186,20 +187,20 @@ def main():
 
     )
 
-    with open("data-sets/reduced-set-opt-set.json", "w") as file:
+    with open("rerun-data-sets/reduced-set-opt-set.json", "w") as file:
         file.write(optimization_set.json())
 
     select_parameters(
-        opt_set,
+        optimization_set,
         parameter_types=["Angles"],
-        output_path="data-sets/reduced-set-angles-params-smirks.json",
+        output_path="rerun-data-sets/reduced-set-angles-params-smirks.json",
         force_field=initial_force_field,
     )
     
     select_parameters(
-        opt_set,
+        optimization_set,
         parameter_types=["Bonds"],
-        output_path="data-sets/reduced-set-bonds-params-smirks.json",
+        output_path="rerun-data-sets/reduced-set-bonds-params-smirks.json",
         force_field=initial_force_field,
     )
 

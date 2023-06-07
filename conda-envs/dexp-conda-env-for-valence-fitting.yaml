@@ -1,0 +1,30 @@
+name: dexp-env
+channels:
+  - conda-forge
+  - openeye
+  - defaults
+dependencies:
+  - python==3.9
+  - openff-toolkit-base==0.10.6
+  - openff-units==0.1.6
+  - openff-utilities==0.1.5
+  - pint==0.19.2
+  - smirnoff-plugins==0.0.3
+  - openff-bespokefit
+  - openff-qcsubmit
+  - pydantic
+  - openeye-toolkits==2021.2.0
+  - forcebalance==1.9.3
+  - openmm==7.7.0
+  - pymbar==3.0.7
+  - torsiondrive
+  - geometric
+  - cmiles
+  - ndcctools
+  - ambertools
+  - openff-forcefields
+  - openmmforcefields==0.11.0
+  - conda-forge::libiconv
+  - click
+  - seaborn
+  - jupyter
