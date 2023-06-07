@@ -10,11 +10,14 @@ data stored in the [QCArchive](https://qcarchive.molssi.org/), as well as the fi
 results object.
 
 ## Curating the data sets
-- `1.dataset-curation.py`: Build the training datasets from QCArchive using `openff-qcsubmit` and the dataset curation tools. 
-- `2.test_elf10_charge_assigment.pu`: Remove records for which we can not assign elf10 charges with the `OpenFF-Toolkit`.
-- `3.create-fb-inputs.py`: Set up the folders and inputs required for the valence optimization via ForceBalance.
+- `Dataset-curation-FB-input-creation-notebook.ipynb`: Build the training datasets from QCArchive using `openff-qcsubmit` and the dataset curation tools. Set up the folders and inputs required for the valence optimization via ForceBalance.
 
 ## Curated data sets
 
 - `reduced-set-opt-set.json`: A dataset of optimised geometries.
 - `reduced-set-td-set.json`: A dataset of torsion drives for proper torsions.
+- `*smirks.json`: List of smirks of the parameters to be optimized.
+
+## ForceBalance sample run
+
+`toy-fb-run`: This directory contains a sample run of forcebalance forcefield fitting run with two targets. It is advised to run the full FB optimization on a HPC cluster, using slurmscripts (or equivalent queue management package). The ForceBalance inputs for all the optimization runs were provided in `/inputs-and-results/optimizations`.
