@@ -1,0 +1,12 @@
+$global
+bond_denom 0.05
+angle_denom 8.0
+dihedral_denom 0.0
+improper_denom 20.0
+$end
+$system
+name 18433007-0
+geometry 18433007-0.xyz
+topology 18433007-0.pdb
+mol2 18433007-0.sdf
+$end
