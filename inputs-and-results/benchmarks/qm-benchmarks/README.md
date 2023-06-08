@@ -58,22 +58,22 @@ Acknowledgments section below for more details).
 
 # File Manifest
 
- 01-processed-qm.json - File containing the exact optimization record ids used in this benchmark.
- 01-processed-qm.sdf.tar.gz - SDF file of the QM optimized final geometries for the corresponding records in the json file.
- 01-setup.py - Script to download and process the QM from QCArchive using `openff-qcsubmit`.
- 02-a-chunk-qm.py - Script to split the SDF file containing QM geometries into chunks for parallel MM optimizations.
- 02-b-minimize.py - Script to perform the MM minimizations with the QM geometry as as starting point
- 02-chunks.tar.gz - Compressed directory that contains the QM chunk files created.
- 02-outputs.tar.gz - Compressed directory that contains the MM optimizations of forcefields mentioned in `03-force-fields.json` file.
- 03-a-compute-metrics.py - Script to compute the metrics RMSD/TFD/ddE using the QM and MM optimized final geometries.
- 03-b-join-metrics.py - Script to combine the metrics from the chunks of csv files.
- 03-force-fields.json - File containing the force field and geometry file paths.
- 03-metrics.csv - Combined metrics file that contains RMSD/TFD/ddE data for all the conformers in the benchmark set.
- 03-outputs.tar.gz - Compressed directory that contains the metrics evaluated in csv files for respective chunks of data.
- 04-outputs/ - Directory that contains the plot outputs from the script `03-plot-metrics.py`.
- 04-plot-metrics.py - Script to plot the metrics RMSD/TFD/ddE on the whole dataset and on subsets of R-groups.
- slurmscript-step02-b-03-a - Slurm script to run the MM optimizations in parallel as an array job and compute the metrics with the optimized geometries.
- slurmscript-step03b-04 - Slurm script to combine the metrics files and plot the metrics.
+- 01-processed-qm.json - File containing the exact optimization record ids used in this benchmark.
+- 01-processed-qm.sdf.tar.gz - SDF file of the QM optimized final geometries for the corresponding records in the json file.
+- 01-setup.py - Script to download and process the QM from QCArchive using `openff-qcsubmit`.
+- 02-a-chunk-qm.py - Script to split the SDF file containing QM geometries into chunks for parallel MM optimizations.
+- 02-b-minimize.py - Script to perform the MM minimizations with the QM geometry as as starting point
+- 02-chunks.tar.gz - Compressed directory that contains the QM chunk files created.
+- 02-outputs.tar.gz - Compressed directory that contains the MM optimizations of forcefields mentioned in `03-force-fields.json` file.
+- 03-a-compute-metrics.py - Script to compute the metrics RMSD/TFD/ddE using the QM and MM optimized final geometries.
+- 03-b-join-metrics.py - Script to combine the metrics from the chunks of csv files.
+- 03-force-fields.json - File containing the force field and geometry file paths.
+- 03-metrics.csv - Combined metrics file that contains RMSD/TFD/ddE data for all the conformers in the benchmark set.
+- 03-outputs.tar.gz - Compressed directory that contains the metrics evaluated in csv files for respective chunks of data.
+- 04-outputs/ - Directory that contains the plot outputs from the script `03-plot-metrics.py`.
+- 04-plot-metrics.py - Script to plot the metrics RMSD/TFD/ddE on the whole dataset and on subsets of R-groups.
+- slurmscript-step02-b-03-a - Slurm script to run the MM optimizations in parallel as an array job and compute the metrics with the optimized geometries.
+- slurmscript-step03b-04 - Slurm script to combine the metrics files and plot the metrics.
 
 
 ## Acknowledgments
