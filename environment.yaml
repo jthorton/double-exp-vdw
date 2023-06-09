@@ -1,31 +1,35 @@
-name: double-exp-vdw
-
+name: dexp-env
 channels:
   - conda-forge
-  - simonboothroyd
   - openeye
   - defaults
-
 dependencies:
-
-  - python
-  - pip
-
-  - openeye-toolkits
-
-  # Common dependencies
-  - tqdm
+  - python==3.9
+  - openff-toolkit-base==0.10.7
+  - openff-evaluator==0.3.11
+  - openff-units==0.1.6
+  - openff-utilities==0.1.5
+  - pint==0.19.2
+  - smirnoff-plugins==0.0.3
+  - openff-bespokefit
+  - openff-qcsubmit
+  - pydantic
+  - openeye-toolkits==2021.2.0
+  - forcebalance==1.9.3
+  - openmm==7.7.0
+  - pymbar==3.0.7
+  - torsiondrive
+  - geometric
+  - cmiles
+  - ndcctools
+  - ambertools
+  - openff-forcefields
+  - openmmforcefields==0.11.0
+  - conda-forge::libiconv
+  - click
   - seaborn
-
-  # vdW fitting
-  - cudatoolkit=11.0
-  - openmm <7.6|>7.6
-  - openff-evaluator-base >=0.3.8
-  - nonbonded >= 0.0.1b4
-  - dask ==2.30.0
-  - distributed ==2.30.1
-  - mdtraj ==1.9.4
-  - smirnoff-plugins >=0.0.2
-
-  # Transfer free energy benchmarks
-  - absolv
+  - jupyter
+  - pandas=1.5.3 # https://github.com/openforcefield/openff-evaluator/issues/506
+  - dask==2023.5.0
+  - distributed==2023.5.0
+  - dask-jobqueue >=0.8.0

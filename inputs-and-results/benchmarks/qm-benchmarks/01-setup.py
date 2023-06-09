@@ -204,7 +204,7 @@ def main(data_set):
 
     print("1g) Writing processed molecules to sdf")
 
-    output_steam = oechem.oemolostream("01-processed-qm.sdf")
+    output_steam = oechem.oemolostream("quantum-chemical-data-sets/01-processed-qm.sdf")
 
     final_record_ids = set()
 
