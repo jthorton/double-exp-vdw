@@ -5,7 +5,7 @@ channels:
   - defaults
 dependencies:
   - python==3.9
-  - openff-toolkit-base==0.10.6
+  - openff-toolkit-base==0.10.7
   - openff-evaluator==0.3.11
   - openff-units==0.1.6
   - openff-utilities==0.1.5
@@ -30,4 +30,6 @@ dependencies:
   - seaborn
   - jupyter
   - pandas=1.5.3 # https://github.com/openforcefield/openff-evaluator/issues/506
-
+  - dask==2023.5.0
+  - distributed==2023.5.0
+  - dask-jobqueue >=0.8.0
