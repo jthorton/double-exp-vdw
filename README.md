@@ -21,3 +21,26 @@ This repository is structured into three main directories:
 The experimental data sets used in this project were curated from the [NIST ThermoML](https://trc.nist.gov/ThermoML.html)
 archive [FreeSolv](https://github.com/MobleyLab/FreeSolv) and the [Minnesota Solvation Database](https://conservancy.umn.edu/handle/11299/213300).
 
+## Reproducibility
+
+For those looking to reproduce any part of the study, 
+the required dependencies are listed in the [environment](environment.yaml) file and can be installed into a virtual environment via conda:
+
+```shell
+conda env create --file environment.yaml
+```
+
+The environment must then be activated before the scripts can be used:
+```shell
+conda activate dexp-env
+```
+To deactivate the environment use:
+```shell
+conda deactivate
+```
+Finally, the environment can be removed via:
+```shell
+conda remove -n dexp-env --all
+```
+
+For more information on installing the conda package manager and virtual environments see the conda [guide](https://conda.io/projects/conda/en/latest/user-guide/install/index.html#installation).
