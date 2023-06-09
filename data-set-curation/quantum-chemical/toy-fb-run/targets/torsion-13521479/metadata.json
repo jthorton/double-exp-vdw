@@ -1,0 +1,1 @@
+{"dihedrals": [[2, 6, 7, 3]], "grid_spacing": [15], "dihedral_ranges": null, "energy_decrease_thresh": null, "energy_upper_limit": 5.0, "torsion_grid_ids": [[-75], [-60], [-45], [-30], [-15], [0], [15], [30], [45], [60], [75]]}
