@@ -4,9 +4,6 @@
 Contained within this directory are the main inputs (or instructions on how they may be generated)
 for training the matrix of force fields against both physical property and QC data.
 
-Currently, the inputs for the vdW fits against physical property data sets are provided, while the
-inputs for the valence fits will need to be generated manually due to their size.
-
 Optimizations and their description:
 1. `dexp-valence-fit`: Valence parameters refit for the output of `dexp-all-fit`, dataset includes all elements except for {F, P, S, I}.
 
@@ -18,3 +15,5 @@ Optimizations and their description:
 starting from a curve fit of the B68 model. 
 
 5. `dexp-all-fit`: Non-bonded fitting of the DE general force field including the optimised DE-TIP4P-B68 water model.
+
+6. `example_physical_fit`: Contains a notebook ([physical-property-fitting.ipynb](example_physical_fit/physical-property-fitting.ipynb)) demonstrating the set up and fitting of a DE-FF to a toy physical property dataset. 
