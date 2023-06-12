@@ -1,4 +1,4 @@
-,Component 1,Role 1,Component 2,Role 2,GSolv (kcal/mol),Uncertanty (kcal/mol)
+,Component 1,Role 1,Component 2,Role 2,GSolv (kcal/mol),Uncertainty (kcal/mol)
 0,C1CNCCN1,Solute,CC(C)CO,Solvent,1.7667471486703858,0.32098242535595545
 1,CNC,Solute,c1ccccc1,Solvent,0.8003800181767025,0.17767635381513816
 2,CCNCC,Solute,CC(C)OC(C)C,Solvent,-0.19060625155480526,0.21970595421520803

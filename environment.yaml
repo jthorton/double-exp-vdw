@@ -33,3 +33,4 @@ dependencies:
   - dask==2023.5.0
   - distributed==2023.5.0
   - dask-jobqueue >=0.8.0
+  - absolv

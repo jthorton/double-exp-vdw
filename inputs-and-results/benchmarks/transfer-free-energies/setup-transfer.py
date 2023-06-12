@@ -20,11 +20,11 @@ def main():
     Create the input files for the aqueous/non-aqueous solvation free energies for the DE-FF.
     """
 
-    MNSOL_DATASET = ""
+    MNSOL_DATASET = "../../../data-set-curation/physical-property/physical-data-sets/mnsol-filtered.json"
     HYDRATION_DATASET = (
-        "../../../data-set-curation/physical-property/benchmarks/fsolv-filtered.json"
+        "../../../data-set-curation/physical-property/physical-data-sets/fsolv-filtered.json"
     )
-    # mnsol = PhysicalPropertyDataSet.from_json(MNSOL_DATASET)
+    mnsol = PhysicalPropertyDataSet.from_json(MNSOL_DATASET)
     freesolv: PhysicalPropertyDataSet = PhysicalPropertyDataSet.from_json(
         HYDRATION_DATASET
     )
