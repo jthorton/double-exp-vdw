@@ -72,8 +72,6 @@ Acknowledgments section below for more details).
 - 03-outputs.tar.gz - Compressed directory that contains the metrics evaluated in csv files for respective chunks of data.
 - 04-outputs/ - Directory that contains the plot outputs from the script `03-plot-metrics.py`.
 - 04-plot-metrics.py - Script to plot the metrics RMSD/TFD/ddE on the whole dataset and on subsets of R-groups.
-- slurmscript-step02-b-03-a - Slurm script to run the MM optimizations in parallel as an array job and compute the metrics with the optimized geometries.
-- slurmscript-step03b-04 - Slurm script to combine the metrics files and plot the metrics.
 
 
 ## Acknowledgments
