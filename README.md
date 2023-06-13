@@ -12,9 +12,7 @@ This repository is structured into three main directories:
 * `data-set-curation` - contains the scripts used to curate the training and test data sets as well as the final test sets.
 
 * `inputs-and-results` - contains the *most up to date* input files required to reproduce this study and the associated output files.
-  
-* `scripts` - contains the scripts used to generate the input schemas / files, and scripts which perform ancillary data 
-  analysis.
+
 
 ### Experimental Data Sets
 
