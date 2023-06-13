@@ -70,7 +70,7 @@ Acknowledgments section below for more details).
 - 03-force-fields.json - File containing the force field and geometry file paths.
 - 03-metrics.csv - Combined metrics file that contains RMSD/TFD/ddE data for all the conformers in the benchmark set.
 - 03-outputs.tar.gz - Compressed directory that contains the metrics evaluated in csv files for respective chunks of data.
-- 04-outputs.tar.gz - Directory that contains the plot outputs from the script `03-plot-metrics.py`.
+- 04-outputs.zip/ - Directory that contains only the aggregated plot outputs from the script `03-plot-metrics.py`.
 - 04-plot-metrics.py - Script to plot the metrics RMSD/TFD/ddE on the whole dataset and on subsets of R-groups.
 
 
