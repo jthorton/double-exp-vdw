@@ -1,4 +1,4 @@
-# Benchmarks
+# Testing
 
 Contained within this directory are the main inputs (or instructions on how they may be generated)
 for performing benchmarks of the produced force fields.
