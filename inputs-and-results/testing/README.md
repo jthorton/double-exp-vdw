@@ -10,3 +10,4 @@ for performing benchmarks of the produced force fields.
 - `transfer-free-energies`: a directory containing the inputs required to perform solvation / transfer free energy
   calculations of a diverse set of solutes / solvents using the `absolv` package, full results are excluded due to size but a csv is included.
 
+- `dimer-interaction-energies`: a directory containing the inputs and results of comparing the DE-FF to the DESS66x8 dimer interaction energies using openmm.
