@@ -20,4 +20,4 @@ results object.
 
 ## ForceBalance sample run
 
-`toy-fb-run`: This directory contains a sample run of forcebalance forcefield fitting run with two targets. It is advised to run the full FB optimization on a HPC cluster, using slurmscripts (or equivalent queue management package). The ForceBalance inputs for all the optimization runs were provided in `/inputs-and-results/optimizations`.
+`toy-fb-run`: This directory contains a sample run of forcebalance forcefield fitting run with two targets. It is advised to run the full FB optimization on a HPC cluster, using slurmscripts (or equivalent queue management package). The ForceBalance inputs for all the optimization runs were provided in `/inputs-and-results/training`.
